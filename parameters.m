@@ -2,10 +2,7 @@ clc;
 close all;
 clear all;
 
-global count tp pwd a0m a1m x
-tp = 1000
-pwd = 1000
-count = 70000
+global a0m a1m x
 countn = 100000
 
 gamma_kp=500;
@@ -42,7 +39,6 @@ num1 = vq2_c(200);
 den1 = [1 p q];
 
 sys_act=tf(num1,den1);
-
 xe = 1:0.1:101;
 ue_alpha = interp1(u_alpha,xe);
 ue_c = interp1(u_c,xe);
